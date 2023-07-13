@@ -1,0 +1,8 @@
+- host: 65.0.203.74
+  remote_user: root
+  become: yes
+  tasks:
+    - name: Clean and Build
+      shell: gradle clean build
+    - name: run the application
+      shell: java -jar demo-0.0.1-SNAPSHOT.jar
